@@ -21,12 +21,15 @@ public class ClarityMicrosoftPlugin: NSObject, FlutterPlugin {
                     return
                 }
 
+                let logLevel: LogLevel = .none
+                let applicationFramework: ApplicationFramework = .flutter
+
                 if let userId = args["userId"] as? String {
-                    let clarityConfig = ClarityConfig(projectId: projectId, userId: userId)
+                    let clarityConfig = ClarityConfig(projectId: projectId, userId: userId, logLevel: logLevel, applicationFramework: applicationFramework)
                     ClaritySDK.initialize(config: clarityConfig)
                     print("Clarity initialized with projectId: \(projectId) and userId: \(userId)")
                 } else {
-                    let clarityConfig = ClarityConfig(projectId: projectId)
+                    let clarityConfig = ClarityConfig(projectId: projectId, logLevel: logLevel, applicationFramework: applicationFramework)
                     ClaritySDK.initialize(config: clarityConfig)
                     print("Clarity initialized with projectId: \(projectId) (no userId provided)")
                 }
