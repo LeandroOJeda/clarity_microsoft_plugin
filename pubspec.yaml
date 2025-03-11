@@ -1,7 +1,7 @@
 name: clarity_microsoft
 description: "A Flutter plugin that enables the integration of Microsoft Clarity analytics into your application."
 version: 0.0.1
-homepage:
+homepage: https://github.com/LeandroOJeda/clarity_microsoft_plugin
 
 environment:
   sdk: ^3.6.2
