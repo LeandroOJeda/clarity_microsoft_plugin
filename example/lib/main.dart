@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     try {
       final platformVersion = await _clarityMicrosoftPlugin.getPlatformVersion() ?? 'Unknown';
-      await _clarityMicrosoftPlugin.initClarity(projectId: 'qkm3a48jzp');
+      await _clarityMicrosoftPlugin.initClarity(projectId: 'YOUR_PROJECT', userId: 'YOUR_USER');
 
       if (mounted) {
         setState(() {
